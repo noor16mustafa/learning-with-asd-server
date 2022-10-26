@@ -20,6 +20,11 @@ app.get('/course/:id', (req, res) => {
     const id = req.params.id;
     const course_details = courses.find(c => c.id === id)
     res.send(course_details);
+});
+app.get('/checkout/:id', (req, res) => {
+    const id = req.params.id;
+    const course_checkout = courses.find(c => c.id === id)
+    res.send(course_checkout);
 })
 
 app.listen(port, () => {
